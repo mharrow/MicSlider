@@ -71,7 +71,7 @@ void loop()
   }
 
   motorOff();
-  delay(2000); // wait for 3 seconds
+  delay(2500); // wait for 3 seconds
   digitalWrite(DIR_PIN, LOW);     // Set the direction.
   quarterStep();
   motorOn();
