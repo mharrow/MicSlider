@@ -1,4 +1,6 @@
 /*
+ * 
+ * Motor test script
 Source code http://www.bristolwatch.com/arduino/easy_driver.htm
 Table 1.   Microstep Resolution Truth Table
  MS_1  MS_2   Resolution
@@ -25,6 +27,8 @@ Table 1.   Microstep Resolution Truth Table
 
 void setup() 
 {
+  Serial.begin(9600);
+  
   pinMode(DIR_PIN, OUTPUT);
   pinMode(STEP_PIN, OUTPUT);
   pinMode(SLEEP, OUTPUT);
@@ -43,11 +47,45 @@ void setup()
 
 void loop()
 {
-
+  if (Serial.available()){
+    byteRead = Serial.read();
+    Serial.write(byteRead);
+    if (byteRead = "q"){
+      move(1, 1);
+      }
+    if (byteRead = "e"){
+      move(2, 1);
+      }
+    if (byteRead = "a"){
+      move(1, 2);
+      }
+    if (byteRead = "d"){
+      move(2, 2);
+      }
+    if (byteRead = "z"){
+      move(1, 3);
+      }
+    if (byteRead = "c"){
+      move(2, 3);
+      }
+    if (byteRead = "b"){
+      move(1, 4);
+      }
+    if (byteRead = "q"){
+      move(2, 4);
+      } 
+  }
   int i;
+  for (i = 0; i< 200; i++)       // Iterate for 200 microsteps.
+  {
+    pulseOut(STEP_PIN);
+    delay(5);
+  }
+}
+  
 
-  motorOff();
-  delay(2000); // wait for 3 seconds
+ /* motorOff();
+  delay(3000); // wait for 3 seconds
   digitalWrite(DIR_PIN, LOW);     // Set the direction.
   fullStep();
   motorOn();
@@ -59,7 +97,7 @@ void loop()
   }
 
   motorOff();
-  delay(2000); // wait for 3 seconds
+  delay(3000); // wait for 3 seconds
   digitalWrite(DIR_PIN, HIGH);     // Set the direction.
   halfStep();
   motorOn();
@@ -71,7 +109,7 @@ void loop()
   }
 
   motorOff();
-  delay(2500); // wait for 3 seconds
+  delay(3000); // wait for 3 seconds
   digitalWrite(DIR_PIN, LOW);     // Set the direction.
   quarterStep();
   motorOn();
@@ -83,7 +121,7 @@ void loop()
   }
 
   motorOff();
-  delay(2000); // wait for 3 seconds
+  delay(3000); // wait for 3 seconds
   digitalWrite(DIR_PIN, HIGH);     // Set the direction.
   eighthStep();
   motorOn();
@@ -94,7 +132,31 @@ void loop()
     delay(2);
   }
 
-} // end loop
+// end loop
+ 
+ void move(int x, int y) {
+    if (x = 1 ) {
+      digitalWrite(DIR_PIN, HIGH);
+    }
+    if (y = 1) {
+      fullStep();
+    }
+    if (x = 2) {
+      digitalWrite(DIR_PIN, LOW);
+    }
+    if (y = 2) {
+      halfStep();
+    }
+    if (y = 3) {
+      quarterStep();
+    }
+    if (y = 4) {
+      eigthStep();
+    }
+} */
+
+
+
 
 // inverts state of pin, delays, then reverts state back
 void    pulseOut(byte x)   {
