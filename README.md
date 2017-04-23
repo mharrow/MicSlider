@@ -10,16 +10,10 @@
   
   Libraries used by this program.
   
-  Accelstepper 
+  Accelstepper - (http://www.airspayce.com/mikem/arduino/AccelStepper/)
   
-  (http://www.airspayce.com/mikem/arduino/AccelStepper/)
-  
-  USBHost_t36
- 
-  USB EHCI Host for Teensy 3.6
+  USBHost_t36 - USB EHCI Host for Teensy 3.6
   Copyright 2017 Paul Stoffregen 
-
-  
   
   Teensy 3.6
   ==========
@@ -33,21 +27,20 @@
   Targus Numpad Function Chart
   ============================
             
-  KEY | Dec  | FUNCTION   
-------------------------------------------------- 
-*    1 | 86 | Save Present x,y Position
-*    2 | 87 | Move Y axis -
-*    3 | 88 | Move to saved x,y Position
-*    4 | 89 | Move x axis -
-*    5 | 90 | n/c
-*    6 | 33 | Move x axis +
-*    7 | 64 | Display Current x,y Position
-*    8 | 35 | Move y axis +
-*    9 | 36 | Move to centre x,y of each axis
-*   TAB|  0 |
-*    / | 81 |
-*   -  | 82 | Reference x,y to 0,0 position Home
-* BACK |127 |
-*    - | 83 |
-*    + | 84 |
-* ENTER|  0 |
+KEY | Dec | FUNCTION   
+-------------------- 
+   1 | 86 | Save Present x,y Position
+   2 | 87 | Move Y axis -
+   3 | 88 | Move to saved x,y Position    4 | 89 | Move x axis -
+   5 | 90 | n/c 
+   6 | 33 | Move x axis + 
+   7 | 64 | Display Current x,y Position
+   8 | 35 | Move y axis +
+   9 | 36 | Move to centre x,y of each axis
+  TAB|  0 |
+   / | 81 |
+  -  | 82 | Reference x,y to 0,0 position Home
+BACK |127 |
+   - | 83 |
+   + | 84 |
+ENTER|  0 |
