@@ -12,19 +12,18 @@ Libraries required
 ------------------
   
 Accelstepper - (http://www.airspayce.com/mikem/arduino/AccelStepper/)
- 
-  
-USBHost_t36 - USB EHCI Host for Teensy 3.6
+   
+USBHost_t36 - USB EHCI Host for Teensy 3.6 - Copyright 2017 Paul Stoffregen
 
- Copyright 2017 Paul Stoffregen 
+(https://www.pjrc.com/store/teensy36.html) 
   
 Teensy 3.6
-==========
-![](img/teensy36.jpg)
+----------
+![](img/teensy36_sm.jpg)
   
 Easy Driver Board
-=================
-![](img/EasyDriver_v45.jpg)
+-----------------
+![](img/EasyDriver_v45_sms.jpg)
   
   
 Targus Numpad Function Chart
